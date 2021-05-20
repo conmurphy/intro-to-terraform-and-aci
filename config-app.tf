@@ -1,4 +1,4 @@
-/*resource "aci_application_profile" "myWebsite" {
+resource "aci_application_profile" "myWebsite" {
   tenant_dn = "${aci_tenant.myTenant.id}"
   name       = "my_website"
 }
@@ -33,4 +33,3 @@ resource "aci_application_epg" "db" {
     prio                            = "unspecified"
     shutdown                    = "no"
   }
-*/
