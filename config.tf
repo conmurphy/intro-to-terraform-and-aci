@@ -18,12 +18,12 @@ resource "aci_subnet" "demosubnet" {
 
 resource "aci_application_profile" "myWebsite" {
   tenant_dn = "${aci_tenant.conmurph_intro_to_terraform.id}"
-  name       = "my_website"
+  name       = "my_website-ap"
 }
 
 resource "aci_application_epg" "web" {
     application_profile_dn  = "${aci_application_profile.myWebsite.id}"
-    name                            = "web"
+    name                            = "web-epg"
     description                   = "this is the web epg created by terraform"
     flood_on_encap            = "disabled"
     fwd_ctrl                    = "none"
@@ -38,7 +38,7 @@ resource "aci_application_epg" "web" {
 
 resource "aci_application_epg" "app" {
     application_profile_dn  = "${aci_application_profile.myWebsite.id}"
-    name                            = "app"
+    name                            = "app-epg"
     description                   = "this is the app epg created by terraform"
     flood_on_encap            = "disabled"
     fwd_ctrl                    = "none"
