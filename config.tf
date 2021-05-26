@@ -23,7 +23,7 @@ resource "aci_application_profile" "myWebsite" {
 
 resource "aci_application_epg" "web" {
     application_profile_dn  = "${aci_application_profile.myWebsite.id}"
-    name                            = "web-epg"
+    name                            = "web"
     description                   = "this is the web epg created by terraform"
     flood_on_encap            = "disabled"
     fwd_ctrl                    = "none"
@@ -38,7 +38,7 @@ resource "aci_application_epg" "web" {
 
 resource "aci_application_epg" "app" {
     application_profile_dn  = "${aci_application_profile.myWebsite.id}"
-    name                            = "app-epg"
+    name                            = "app"
     description                   = "this is the app epg created by terraform"
     flood_on_encap            = "disabled"
     fwd_ctrl                    = "none"
@@ -54,7 +54,7 @@ resource "aci_application_epg" "app" {
 
 resource "aci_application_epg" "db" {
     application_profile_dn  = "${aci_application_profile.myWebsite.id}"
-    name                            = "db-epg"
+    name                            = "db"
     description                   = "this is the database epg created by terraform"
     flood_on_encap            = "disabled"
     fwd_ctrl                    = "none"
