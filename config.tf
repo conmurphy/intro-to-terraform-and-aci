@@ -1,5 +1,5 @@
 
-resource "aci_tenant" "conmurph_intro_to_terraform" {
+/*resource "aci_tenant" "conmurph_intro_to_terraform" {
   name        = "conmurph_intro_to_terraform"    
 }
 
@@ -66,3 +66,4 @@ resource "aci_application_epg" "db" {
     prio                            = "unspecified"
     shutdown                    = "no"
   }
+*/
