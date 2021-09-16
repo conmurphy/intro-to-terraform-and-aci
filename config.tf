@@ -1,8 +1,8 @@
 
-/*resource "aci_tenant" "conmurph_intro_to_terraform" {
+resource "aci_tenant" "conmurph_intro_to_terraform" {
   name        = "conmurph_intro_to_terraform"    
 }
-
+/*
 resource "aci_bridge_domain" "bd_for_subnet" {
   tenant_dn   = "${aci_tenant.conmurph_intro_to_terraform.id}"
   name        = "bd_for_subnet"
